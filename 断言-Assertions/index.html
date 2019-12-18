@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source Sans Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":false,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+  <meta name="description" content="Assertions indicate in some way that a match is possible. Assertions include look-ahead, look-behind, and conditional expressions.断言assertions表明以某种方式会存在匹配，包括先行断言look-ahead、后行断言look-behind、以及条件表达式condi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="断言 &#x2F; Assertions">
+<meta property="og:url" content="https://fish-inu-hexo.github.io/断言-Assertions/index.html">
+<meta property="og:site_name" content="Shiba yu">
+<meta property="og:description" content="Assertions indicate in some way that a match is possible. Assertions include look-ahead, look-behind, and conditional expressions.断言assertions表明以某种方式会存在匹配，包括先行断言look-ahead、后行断言look-behind、以及条件表达式condi">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-22T16:05:00.427Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="断言 &#x2F; Assertions">
+<meta name="twitter:description" content="Assertions indicate in some way that a match is possible. Assertions include look-ahead, look-behind, and conditional expressions.断言assertions表明以某种方式会存在匹配，包括先行断言look-ahead、后行断言look-behind、以及条件表达式condi">
+  <link rel="canonical" href="https://fish-inu-hexo.github.io/断言-Assertions/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>断言 / Assertions | Shiba yu</title>
+  <meta name="generator" content="Hexo 3.8.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Shiba yu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fish-inu-hexo.github.io/断言-Assertions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柴鱼">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiba yu">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">断言 / Assertions
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-10-22 22:59:30" itemprop="dateCreated datePublished" datetime="2019-10-22T22:59:30+08:00">2019-10-22</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-23 00:05:00" itemprop="dateModified" datetime="2019-10-23T00:05:00+08:00">2019-10-23</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/translation/" itemprop="url" rel="index"><span itemprop="name">translation</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Assertions indicate in some way that a match is possible. Assertions include look-ahead, look-behind, and conditional expressions.</p><p><ruby>断言<rt>assertions</rt></ruby>表明以某种方式会存在匹配，包括<ruby>先行断言<rt>look-ahead</rt></ruby>、<ruby>后行断言<rt>look-behind</rt></ruby>、以及<ruby>条件表达式<rt>conditional expressions</rt></ruby>．</p><a id="more"></a>
+
+
+<h2 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h2><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><p>The <code>?</code> character may also be used as a quantifier.</p>
+<p><code>?</code>也可以当作量词.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Characters</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">x(?=y)</td>
+<td align="left"><strong>Lookahead assertion:</strong> Matches <code>*x*</code> only if <code>*x*</code> is followed by <code>*y*</code>. For example, /<code>Jack(?=Sprat)/</code> matches “Jack” only if it is followed by “Sprat”. `/Jack(?=Sprat</td>
+</tr>
+<tr>
+<td align="left">x(?!y)</td>
+<td align="left"><strong>Negative lookahead assertion:</strong> Matches <code>*x*</code> only if <code>*x*</code> is not followed by <code>*y*</code>. For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec(&#39;3.141&#39;)</code> matches “141” but not “3.</td>
+</tr>
+<tr>
+<td align="left">(?&lt;=y)x</td>
+<td align="left"><strong>Lookbehind assertion:</strong> Matches <code>*x*</code> only if <code>*x*</code> is preceded by <code>*y*</code>. For example, <code>/(?&lt;=Jack)Sprat/</code> matches “Sprat” only if it is preceded by “Jack”. `/(?&lt;=Jack</td>
+</tr>
+<tr>
+<td align="left">(?&lt;!y)x</td>
+<td align="left"><strong>Negative lookbehind assertion:</strong> Matches <code>*x*</code> only if <code>*x*</code> is not preceded by <code>*y*</code>. For example, <code>/(?&lt;!-)\d+/</code> matches a number only if it is not preceded by a minus sign. <code>/(?&lt;!-)\d+/.exec(&#39;3&#39;)</code> matches “3”. <code>/(?&lt;!-)\d+/.exec(&#39;-3&#39;)</code>  match is not found because the number is preceded by the minus sign.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x(?=y)</td>
+<td><strong>先行断言:</strong> y紧跟x的情况下匹配x。例如，对于/<code>Jack(?=Sprat)</code>/，“Jack”在跟有“Sprat”的情况下才会得到匹配．<code>/Jack(?=Sprat)/</code> “Jack”后跟有“Sprat”或“Frost”的情况下才会得到匹配。不过， 匹配结果不包括“Sprat”或“Frost”。</td>
+</tr>
+<tr>
+<td>x(?!y)</td>
+<td><strong>负向先行断言:</strong> x后无y紧随的情况下匹配x。例如，对于<code>/\d+(?!\。)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，“3”得到匹配，“141”则无。</td>
+</tr>
+<tr>
+<td>(?&lt;=y)x</td>
+<td><strong>后行断言:</strong> x紧随y的情况下匹配x。例如，对于<code>/(?&lt;=Jack)Sprat/</code>，“Sprat”紧随“Jack”时才会得到匹配。对于<code>/(?&lt;=Jack)Sprat</code>，“Sprat”在紧随“Jack”或“Tom”的情况下才会得到匹配。不过，匹配结果中不包括“Jack”或“Tom”。</td>
+</tr>
+<tr>
+<td>(?&lt;!y)x</td>
+<td><strong>负向后行断言:</strong> x不紧随y的情况下匹配x。例如，对于<code>/(?&lt;!-)\d+/</code>，数字紧随-符号的情况下才会得到匹配。对于<code>/(?&lt;!-)\d+/.exec(3)</code> ，“3”得到匹配。 而<code>/(?&lt;!-)\d+/.exec(-3)</code>的结果无匹配，这是由于数字之前有-符号。</td>
+</tr>
+</tbody></table>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="Lookahead-assertion"><a href="#Lookahead-assertion" class="headerlink" title="Lookahead assertion"></a>Lookahead assertion</h3><h3 id="先行断言"><a href="#先行断言" class="headerlink" title="先行断言"></a>先行断言</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JS Lookahead assertion x(?=y)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> regex = <span class="regexp">/First(?= test)/g</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'First test'</span>.match(regex)); <span class="comment">// [ 'First' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'First peach'</span>.match(regex)); <span class="comment">// null</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'This is a First test in a year.'</span>.match(regex)); <span class="comment">// [ 'First' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'This is a First peach in a month.'</span>.match(regex)); <span class="comment">// null</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Basic-negative-lookahead-assertion"><a href="#Basic-negative-lookahead-assertion" class="headerlink" title="Basic negative lookahead assertion"></a>Basic negative lookahead assertion</h3><h3 id="负向先行断言"><a href="#负向先行断言" class="headerlink" title="负向先行断言"></a>负向先行断言</h3><p>For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec(&#39;3.141&#39;)</code> matches “141” but not “3.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\d+(?!\.)/g</span>.exec(<span class="string">'3.141'</span>)); <span class="comment">// [ '141', index: 2, input: '3.141' ]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Different-meaning-of-‘-’-combination-usage-in-Assertions-and-Ranges"><a href="#Different-meaning-of-‘-’-combination-usage-in-Assertions-and-Ranges" class="headerlink" title="Different meaning of ‘?!’ combination usage in Assertions and  Ranges"></a>Different meaning of ‘?!’ combination usage in Assertions and  Ranges</h3><h3 id="断言与范围组合使用情况下其中“-”的不同含义"><a href="#断言与范围组合使用情况下其中“-”的不同含义" class="headerlink" title="断言与范围组合使用情况下其中“?!”的不同含义"></a>断言与范围组合使用情况下其中“?!”的不同含义</h3><p>Different meaning of <code>?!</code> combination usage in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions" target="_blank" rel="noopener">Assertions</a> <code>/x(?!y)/</code>and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges" target="_blank" rel="noopener">Ranges</a> <code>[^?!]</code>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> orangeNotLemon = <span class="string">"Do you want to have an orange? Yes, I do not want to have a lemon!"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Different meaning of '?!' combination usage in Assertions /x(?!y)/ and  Ranges /[^?!]/</span></span><br><span class="line"><span class="keyword">let</span> selectNotLemonRegex = <span class="regexp">/[^?!]+have(?! a lemon)[^?!]+[?!]/gi</span></span><br><span class="line"><span class="built_in">console</span>.log(orangeNotLemon.match(selectNotLemonRegex)); <span class="comment">// [ 'Do you want to have an orange?' ]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> selectNotOrangeRegex = <span class="regexp">/[^?!]+have(?! an orange)[^?!]+[?!]/gi</span></span><br><span class="line"><span class="built_in">console</span>.log(orangeNotLemon.match(selectNotOrangeRegex)); <span class="comment">// [ ' Yes, I do not want to have a lemon!' ]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Lookbehind-assertion"><a href="#Lookbehind-assertion" class="headerlink" title="Lookbehind assertion"></a>Lookbehind assertion</h3><h3 id="后行断言"><a href="#后行断言" class="headerlink" title="后行断言"></a>后行断言</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> oranges = [<span class="string">'ripe orange A '</span>, <span class="string">'green orange B'</span>, <span class="string">'ripe orange C'</span>,];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ripe_oranges = oranges.filter( <span class="function"><span class="params">fruit</span> =&gt;</span> fruit.match(<span class="regexp">/(?&lt;=ripe )orange/</span>));</span><br><span class="line"><span class="built_in">console</span>.log(ripe_oranges); <span class="comment">// [ 'ripe orange A ', 'ripe orange C' ]</span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/closure-闭包/" rel="next" title="closure / 闭包">
+                  <i class="fa fa-chevron-left"></i> closure / 闭包
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/Quality-values-质量价值/" rel="prev" title="Quality values / 质量价值">
+                  Quality values / 质量价值 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc" data-target="post-toc-wrap">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc">
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Types"><span class="nav-number">1.</span> <span class="nav-text">Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型"><span class="nav-number">2.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Examples"><span class="nav-number">3.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">4.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lookahead-assertion"><span class="nav-number">4.1.</span> <span class="nav-text">Lookahead assertion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先行断言"><span class="nav-number">4.2.</span> <span class="nav-text">先行断言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-negative-lookahead-assertion"><span class="nav-number">4.3.</span> <span class="nav-text">Basic negative lookahead assertion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负向先行断言"><span class="nav-number">4.4.</span> <span class="nav-text">负向先行断言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Different-meaning-of-‘-’-combination-usage-in-Assertions-and-Ranges"><span class="nav-number">4.5.</span> <span class="nav-text">Different meaning of ‘?!’ combination usage in Assertions and  Ranges</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#断言与范围组合使用情况下其中“-”的不同含义"><span class="nav-number">4.6.</span> <span class="nav-text">断言与范围组合使用情况下其中“?!”的不同含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lookbehind-assertion"><span class="nav-number">4.7.</span> <span class="nav-text">Lookbehind assertion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后行断言"><span class="nav-number">4.8.</span> <span class="nav-text">后行断言</span></a></li></ol></li></ol></div>
+          </div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">柴鱼</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+        
+      </div>
+    
+  </nav>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">柴鱼</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Rattlingshinuiba" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/muse.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>

@@ -54,14 +54,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shiba yu">
-<meta property="og:url" content="https://fish-inu-hexo.github.io/archives/2019/06/index.html">
+  <meta name="description" content="For simplicity, examples below didn’t include fancy additions like bootstrap. Only native code.When it comes to centering an element, we would think text-align(for inline element) or margin: auto(for">
+<meta name="keywords" content="front-end">
+<meta property="og:type" content="article">
+<meta property="og:title" content="center an element relative to its sibling">
+<meta property="og:url" content="https://fish-inu-hexo.github.io/center-an-element-relative-to-its-sibling/index.html">
 <meta property="og:site_name" content="Shiba yu">
+<meta property="og:description" content="For simplicity, examples below didn’t include fancy additions like bootstrap. Only native code.When it comes to centering an element, we would think text-align(for inline element) or margin: auto(for">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-12T09:44:24.186Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shiba yu">
-  <link rel="canonical" href="https://fish-inu-hexo.github.io/archives/2019/06/">
+<meta name="twitter:title" content="center an element relative to its sibling">
+<meta name="twitter:description" content="For simplicity, examples below didn’t include fancy additions like bootstrap. Only native code.When it comes to centering an element, we would think text-align(for inline element) or margin: auto(for">
+  <link rel="canonical" href="https://fish-inu-hexo.github.io/center-an-element-relative-to-its-sibling/">
 
 
 <script id="page-configurations">
@@ -69,13 +74,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | Shiba yu</title>
+  <title>center an element relative to its sibling | Shiba yu</title>
   <meta name="generator" content="Hexo 3.8.0">
   
 
@@ -180,21 +185,6 @@
 
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 </nav>
 </div>
     </header>
@@ -202,72 +192,128 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content page-archive">
+          <div id="content" class="content page-post-detail">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 13 posts in total. Keep on posting.
-      </span>
-      
-
-      
-
-  
-  
-  
-
-  
+  <div id="posts" class="posts-expand">
     
-    <div class="collection-title">
-      <h1 class="archive-year" id="archive-year-2019">2019</h1>
-    </div>
-  
-  
 
   <article class="post" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fish-inu-hexo.github.io/center-an-element-relative-to-its-sibling/">
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/first/" itemprop="url">
-            <span itemprop="name">first</span>
-          </a>
-        
-      </h2>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柴鱼">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-06-07T11:19:52+08:00"
-              content="2019-06-07">
-          06-07
-        </time>
-      </div>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiba yu">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">center an element relative to its sibling
 
-    </header>
-  </article>
+          
+        </h1>
 
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
 
+              
+                
+              
 
+              <time title="Created: 2019-09-12 10:57:05 / Modified: 17:44:24" itemprop="dateCreated datePublished" datetime="2019-09-12T10:57:05+08:00">2019-09-12</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>For simplicity, examples below didn’t include fancy additions like bootstrap. Only native code.</p><p>When it comes to centering an element, we would think text-align(for inline element) or margin: auto(for block element) could help with respect to viewport, but there is an edge case: </p><a id="more"></a>
+
+<p>You center an input group relative to the viewport but attempt to place the submit button next to it vertically, though the horizontal option will suffice.</p>
+<p>However, problem occurs:</p>
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="rattlingdog" data-slug-hash="xxKjMoX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="xxKjMoX">
+  <span>See the Pen <a href="https://codepen.io/rattlingdog/pen/xxKjMoX/" target="_blank" rel="noopener">
+  xxKjMoX</a> by jojo (<a href="https://codepen.io/rattlingdog" target="_blank" rel="noopener">@rattlingdog</a>)
+  on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<p>Looks like the button and input filed don’t go together well. The point is we try to align these two boxes but the default setting includes label box.</p>
+<p>Well, it is OK when we discard <label> tag as you can put the role of label into the placeholder attribute of input element. But occasionally we encounter above problem how do we solve it?</label></p>
 
     </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/front-end/" rel="tag"># front-end</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/an-alterative-way-to-append-child-to-current-tag/" rel="next" title="an alternative way to append child to current tag">
+                  <i class="fa fa-chevron-left"></i> an alternative way to append child to current tag
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/a-caveat-when-using-rm-command/" rel="prev" title="a caveat when using rm command">
+                  a caveat when using rm command <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -286,6 +332,11 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc" data-target="post-toc-wrap">
@@ -449,5 +500,8 @@
 
 
   
+  <script src="/js/post-details.js?v=7.3.0"></script>
+
+
 </body>
 </html>

@@ -54,14 +54,18 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shiba yu">
-<meta property="og:url" content="https://fish-inu-hexo.github.io/archives/2019/06/index.html">
+  <meta name="description" content="Recently I have committed a big mistake: I rm my home directory. One good aspect of this bad situation is that I have backed up the code directory with borg. However, my hexo personal blog is not in t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="a caveat when using rm command">
+<meta property="og:url" content="https://fish-inu-hexo.github.io/a-caveat-when-using-rm-command/index.html">
 <meta property="og:site_name" content="Shiba yu">
+<meta property="og:description" content="Recently I have committed a big mistake: I rm my home directory. One good aspect of this bad situation is that I have backed up the code directory with borg. However, my hexo personal blog is not in t">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-29T08:06:17.519Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shiba yu">
-  <link rel="canonical" href="https://fish-inu-hexo.github.io/archives/2019/06/">
+<meta name="twitter:title" content="a caveat when using rm command">
+<meta name="twitter:description" content="Recently I have committed a big mistake: I rm my home directory. One good aspect of this bad situation is that I have backed up the code directory with borg. However, my hexo personal blog is not in t">
+  <link rel="canonical" href="https://fish-inu-hexo.github.io/a-caveat-when-using-rm-command/">
 
 
 <script id="page-configurations">
@@ -69,13 +73,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | Shiba yu</title>
+  <title>a caveat when using rm command | Shiba yu</title>
   <meta name="generator" content="Hexo 3.8.0">
   
 
@@ -180,21 +184,6 @@
 
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 </nav>
 </div>
     </header>
@@ -202,72 +191,120 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content page-archive">
+          <div id="content" class="content page-post-detail">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 13 posts in total. Keep on posting.
-      </span>
-      
-
-      
-
-  
-  
-  
-
-  
+  <div id="posts" class="posts-expand">
     
-    <div class="collection-title">
-      <h1 class="archive-year" id="archive-year-2019">2019</h1>
-    </div>
-  
-  
 
   <article class="post" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fish-inu-hexo.github.io/a-caveat-when-using-rm-command/">
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/first/" itemprop="url">
-            <span itemprop="name">first</span>
-          </a>
-        
-      </h2>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柴鱼">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-06-07T11:19:52+08:00"
-              content="2019-06-07">
-          06-07
-        </time>
-      </div>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiba yu">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">a caveat when using rm command
 
-    </header>
-  </article>
+          
+        </h1>
 
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
 
+              
+                
+              
 
+              <time title="Created: 2019-10-22 16:57:56" itemprop="dateCreated datePublished" datetime="2019-10-22T16:57:56+08:00">2019-10-22</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-29 16:06:17" itemprop="dateModified" datetime="2019-10-29T16:06:17+08:00">2019-10-29</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Recently I have committed a big mistake: I <code>rm</code> my home directory. One good aspect of this bad situation is that I have backed up the code directory with <code>borg</code>. However, my <code>hexo</code> personal blog is not in the list. To make matters worse, most posts of this blog were stored locally. </p><a id="more"></a>
+<p>The mess is attributed to a simple command: <code>rm</code>. Although <code>rm</code> are usually treated as a source of memes  at which even newbies would smile knowingly, this worst case happened to me. Here is the command which cause a disaster: <code>rm -rf * &#39;/home/&lt;user_name&gt;/.local/share/Trash/files&#39;</code>. </p>
+<p>Well, I thought I specified a folder to delete everything(<code>*</code>) in the absolute path(path in the single quote) and expected so. But my home directory was empty after that. </p>
+<p>There is an another joke when we talk about <code>rm</code>: You should install <code>adobe</code> series in your filesystem because it would hold its own against <code>rm</code> for a while when you delete your <code>/</code> root stupidly. </p>
+<p>So the conclusion is that you need to <code>rm</code> files in the current working directory. If not, be aware of <code>*</code>, like the path you specify in the single quote, is part of argument to tell <code>rm</code> to delete files. So the command should be <code>rm -rf &#39;/home/&lt;user_name&gt;/.local/share/Trash/files/*&#39;</code>. I learned this lesson the hard way, and hope you never encounter this kind of issue.</p>
+<p>With hindsight, I think I ought to back up files on a regular basis.</p>
 
     </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/center-an-element-relative-to-its-sibling/" rel="next" title="center an element relative to its sibling">
+                  <i class="fa fa-chevron-left"></i> center an element relative to its sibling
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/closure-闭包/" rel="prev" title="closure / 闭包">
+                  closure / 闭包 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -286,6 +323,11 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc" data-target="post-toc-wrap">
@@ -449,5 +491,8 @@
 
 
   
+  <script src="/js/post-details.js?v=7.3.0"></script>
+
+
 </body>
 </html>
