@@ -54,18 +54,14 @@
   };
 </script>
 
-  <meta name="description" content="A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer functi">
-<meta property="og:type" content="article">
-<meta property="og:title" content="closure &#x2F; 闭包">
-<meta property="og:url" content="https://fish-inu.github.io/hexo/closure-闭包/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Shiba yu">
+<meta property="og:url" content="https://fish-inu.github.io/hexo/archives/2020/index.html">
 <meta property="og:site_name" content="Shiba yu">
-<meta property="og:description" content="A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer functi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-22T13:12:31.645Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="closure &#x2F; 闭包">
-<meta name="twitter:description" content="A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer functi">
-  <link rel="canonical" href="https://fish-inu.github.io/hexo/closure-闭包/">
+<meta name="twitter:title" content="Shiba yu">
+  <link rel="canonical" href="https://fish-inu.github.io/hexo/archives/2020/">
 
 
 <script id="page-configurations">
@@ -73,13 +69,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
+    isPost: false,
     isPage: false,
-    isArchive: false
+    isArchive: true
   };
 </script>
 
-  <title>closure / 闭包 | Shiba yu</title>
+  <title>Archive | Shiba yu</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -184,6 +180,21 @@
 
     
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
 </nav>
 </div>
     </header>
@@ -191,126 +202,72 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content page-post-detail">
+          <div id="content" class="content page-archive">
             
 
-  <div id="posts" class="posts-expand">
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        Um..! 14 posts in total. Keep on posting.
+      </span>
+      
+
+      
+
+  
+  
+  
+
+  
     
+    <div class="collection-title">
+      <h1 class="archive-year" id="archive-year-2020">2020</h1>
+    </div>
+  
+  
 
   <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fish-inu.github.io/hexo/hexo/closure-闭包/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="柴鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/hexo/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shiba yu">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">closure / 闭包
-
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-10-22 21:02:54 / Modified: 21:12:31" itemprop="dateCreated datePublished" datetime="2019-10-22T21:02:54+08:00">2019-10-22</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/hexo/categories/translation/" itemprop="url" rel="index"><span itemprop="name">translation</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p>A <strong>closure</strong> is the combination of a function bundled together (enclosed) with references to its surrounding state (the <strong>lexical environment</strong>). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.<br>函数与对其状态即<strong>词法环境</strong>（<strong>lexical environment</strong>）的引用共同构成<strong>闭包</strong>（<strong>closure</strong>）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在JavaScript，函数在每次创建时生成闭包。</p><a id="more"></a>
-<h2 id="Lexical-scoping"><a href="#Lexical-scoping" class="headerlink" title="Lexical scoping"></a>Lexical scoping</h2><h2 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h2><p>Consider the following:<br>请看下面的代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> name = <span class="string">"Mozilla"</span>; <span class="comment">// name is a local variable created by init 							//name 是由 init 创建的局部变量</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">displayName</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    					<span class="comment">//displayName() is the inner function, a closure</span></span><br><span class="line">    					<span class="comment">// displayName() 是内部函数,即闭包</span></span><br><span class="line">        alert(name); 	<span class="comment">// use variable declared in the parent function</span></span><br><span class="line">        				<span class="comment">// 父函数中声明的变量</span></span><br><span class="line">    &#125;</span><br><span class="line">    displayName();</span><br><span class="line">&#125;</span><br><span class="line">init();</span><br></pre></td></tr></table></figure>
-
-<p><code>init()</code> creates a local variable called <code>name</code> and a function called <code>displayName()</code>. The <code>displayName()</code> function is an inner function that is defined inside <code>init()</code> and is only available within the body of the <code>init()</code> function. Note that the <code>displayName()</code> function has no local variables of its own. However, since inner functions have access to the variables of outer functions, <code>displayName()</code> can access the variable <code>name</code> declared in the parent function, <code>init()</code>.
-<code>init()</code> 创建了一个局部变量 <code>name</code> 和一个名为 <code>displayName()</code> 的函数。<code>displayName()</code> 是定义在 <code>init()</code> 里的内部函数，仅在该函数体内可被获取。请注意，<code>displayName()</code> 内没有自己的局部变量，然而它可以访问到外部函数的变量，所以 <code>displayName()</code> 可以使用父函数 <code>init()</code> 中声明的变量 <code>name</code> 。</p>
-<p><a href="http://jsfiddle.net/xAFs9/3/" target="_blank" rel="noopener">Run</a> the code and notice that the <code>alert()</code> statement within the <code>displayName()</code> function successfully displays the value of the <code>name</code> variable, which is declared in its parent function. This is an example of <em>lexical</em> <em>scoping</em>, which describes how a parser resolves variable names when functions are nested. The word “lexical” refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.<br><a href="http://jsfiddle.net/xAFs9/3/" target="_blank" rel="noopener">运行</a>该代码后发现， <code>displayName()</code> 内的 <code>alert()</code> 语句显示出了 <code>name</code> 变量的值（该变量在父函数中声明）。这个<em>词法作用域</em>的例子描述了引擎是如何解析嵌套函数中的变量的。词法（lexical）一词表明，词法作用域根据声明变量的位置来确定该变量可被访问的位置。嵌套函数可获取声明于外部作用域的函数。</p>
-
-    </div>
-
-    
-    
-    
+      <h2 class="post-title">
         
-      
-
-      <footer class="post-footer">
-
+          <a class="post-title-link" href="/hexo/Debug-puppeteer-in-an-interactive-way/" itemprop="url">
+            <span itemprop="name">Debug puppeteer in an interactive way</span>
+          </a>
         
+      </h2>
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/hexo/a-caveat-when-using-rm-command/" rel="next" title="a caveat when using rm command">
-                  <i class="fa fa-chevron-left"></i> a caveat when using rm command
-                </a>
-              
-            </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2020-01-05T22:06:06+08:00"
+              content="2020-01-05">
+          01-05
+        </time>
+      </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/hexo/断言-Assertions/" rel="prev" title="断言 / Assertions">
-                  断言 / Assertions <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
-      </footer>
-    
-  </div>
-  
-  
-  
+    </header>
   </article>
 
+
+
+
+    </div>
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -329,11 +286,6 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
-        
-        
-        
-        
-      
 
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc" data-target="post-toc-wrap">
@@ -346,10 +298,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lexical-scoping"><span class="nav-number">1.</span> <span class="nav-text">Lexical scoping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#词法作用域"><span class="nav-number">2.</span> <span class="nav-text">词法作用域</span></a></li></ol></div>
-          </div>
-        
       </div>
       <!--/noindex-->
 
@@ -501,8 +449,5 @@
 
 
   
-  <script src="/hexo/js/post-details.js?v=7.3.0"></script>
-
-
 </body>
 </html>
